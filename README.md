@@ -1,2 +1,2 @@
-# Kdamamc-Stats
+# Kedamamc-Stats
   CSS需要重写。
