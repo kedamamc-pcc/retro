@@ -1,6 +1,6 @@
 <template functional>
-    <div id="newPlayer">
-        <div class="newPlayer">
+    <div id="New-Player">
+        <div class="New-Player">
             <div>
                 <strong>欢迎新萌</strong>
                 <span>昨日入服的玩家(0点之后入服的于次日显示)</span>
@@ -25,7 +25,3 @@
         name: "newPlayer"
     }
 </script>
-
-<style scoped>
-
-</style>

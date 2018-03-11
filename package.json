@@ -11,14 +11,14 @@
     "autoprefixer": "^8.1.0",
     "axios": "^0.18.0",
     "css-loader": "^0.28.10",
-    "postcss": "^6.0.19",
-    "postcss-cli": "^5.0.0",
     "postcss-cssnext": "^3.1.0",
     "postcss-loader": "^2.1.1",
-    "sass-loader": "^6.0.7",
     "style-loader": "^0.20.2",
     "vue": "^2.5.13",
-    "vue-router": "^3.0.1"
+    "vue-loader": "^14.2.1",
+    "vue-router": "^3.0.1",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.11"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.0-beta.3",

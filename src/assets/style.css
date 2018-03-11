@@ -1,147 +1,169 @@
-
-html, body, #app {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    font-family: sans-serif;
+*{
+  margin: 0 auto;
+  padding: 0 auto;
+  font-family: sans-serif;
 }
-#header {
-    background: #333;
-    text-align: center;
-    color: #DDD;
-    overflow: hidden;
-    height: 50px;
-    line-height: 50px;
+:root{
+  --background: #333;
+  --color:#DDD;
+  --text-align:center;
+  --width: 100%;
+  --height: 100%;
+  --float-left: left;
+  --float-right: right;
+}
+html{
+  line-height: 1.15;
 }
 .clearfix:after {
-    content: "";
-    height: 0;
-    display: block;
-    visibility: hidden;
-    clear: both
+  content: "";
+  height: 0;
+  display: block;
+  visibility: hidden;
+  clear: both
 }
 .clearfix {
-    zoom: 1;
+  zoom: 1;
 }
-sup{
-    line-height: 1px;
+#header{
+  height: var(--height);
+  width: var(--width);
+  background: var(--background);
+  color: var(--color);
 }
-.block,.rank{
-    text-align:justify ;
-    width: 50%;
-    margin: 0 auto;
+.block{
+  width: calc(var(--width) / 2);
+  padding: 1em 0;
 }
-.block strong {
-    float: left;
+.block strong{
+  float: var(--float-left);
 }
-
-.block span,.ranks  span {
-    float: right;
-    font-size: 14px;
-    padding-right: 10px;
+strong{
+  font-weight: bolder;
 }
-
-a {
-    margin-right: .5em;
-    color: #FFF;
-    text-decoration: none;
+.block span{
+  float: var(--float-right);
+  color: #CCC;
+  font-size: small;
+  line-height: 1.15rem;
+}
+.block a{
+  color: #fff;
+  text-decoration: none;
+  margin-right: 0.5em;
+}
+#New-Player{
+  border-bottom: 1px solid #CCC;
+  width: var(--width);
+}
+.New-Player{
+  width: calc(var(--width) / 2);
+  padding: .5em 0;
+}
+.New-Player span::before{
+  font-size: small;
+  content: '\2022';
+  margin:0.5em;
+}
+.New-Player ul{
+  padding: 0;
+  margin-bottom: 0;
+}
+.New-Player ul::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.New-Player li{
+  list-style: none;
+  display: inline-block;
+  font-family: Consolas, Menlo, monospace;
+}
+.New-Player li::before {
+  content: '/';
+  padding: 0 .5em;
+}
+.New-Player li:first-child::before {
+  content: none;
+}
+.New-Player div{
+  padding: 1em 0;
+  line-height: 1.8em;
+}
+.New-Player span{
+  color: #999;
+  font-size: small;
+}
+.rank{
+  width: calc(var(--width) /2);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .ranks{
-    width: 305px;
-    height: 310px;
-    display: inline-block;
-    background: #f6f6f6;
-    border-radius: 5px;
-    box-shadow: 0 1px 3px #BBB;
-    box-sizing: border-box;
-    margin: 6px;
+  flex: 0 0 307px;
+  background: #f6f6f6;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin: 5px;
+  text-align: var(--text-align);
+  box-shadow: 0 1px 3px #BBB;
 }
-.ranks > p{
-    display: inline-block;
-    margin:0 0 10px 0;
-    width: 100%;
-    text-align: center;
-    font-size: 10px;
-    color: #999;
+.ranks strong{
+  display: block;
+  font-weight: normal;
+  padding: 10px;
+  border-bottom: 1px solid #D9D9D9;
+  text-align: var(--text-align);
 }
-.ranks > strong{
-    width: 100%;
-    display: inline-block;
-    text-align: center;
-    font-weight:normal;
-    border-bottom: 1px solid #D9D9D9;
-    padding:10px  0 10px 0;
+.ranks ol{
+  padding: 10px 0;
+  margin: 0;
+  text-align: left;
+  list-style-position: inside;
+  display: block;
+  list-style-type: decimal;
 }
-.ranks  li {
-    color: #AAA;
-    text-align: left;
+.ranks li{
+  position: relative;
+  padding: 0 1em;
+  line-height: 1.4rem;
+  color: #AAA;
+  font-size: small;
+  transition: 0.1s linear;
+  transition-property: background, box-shadow;
+  display: list-item;
+  text-align: -webkit-match-parent;
 }
 .ranks li:hover {
-    background: #FFF;
-    box-shadow: 0 0 3px #CCC;
+  background: #FFF;
+  box-shadow: 0 0 3px #CCC;
 }
-ol{
-    line-height: 19px;
+.ranks code{
+  position: absolute;
+  left: 2.5em;
+  font-size: medium;
+  color: #000;
+  font-family: Consolas, menlo, monospace;
 }
-code{
-   color: #000;
-    font-size: medium;
-    font-family:Consolas, Menlo, monospace;
+.ranks span{
+   margin-left: 1em;
+   float: var(--float-right);
+ }
+.ranks p{
+  margin: 0 10px  10px;
+  color: #999;
+  font-size: small;
 }
-#newPlayer{
-    width: 100%;
-    border-bottom: 1px solid #AAA;
-}
-.newPlayer span::before{
-    font-size: small;
-    content: '\2022';
-    margin:0.5em;
-}
-.newPlayer{
-    width: 50%;
-    margin: 0 auto;
-
-}
-.newPlayer div{
-    padding: 16px 0;
-}
-.newPlayer p{
-    font-size: small;
-    margin-bottom: 0;
-}
-.newPlayer ul{
-    padding: 0px;
-}
-.newPlayer li{
-    list-style: none;
-    display: inline-block;
-}
-.newPlayer li::before {
-    content: '/';
-    padding: 0 .5em;
-}
-.newPlayer li:first-child::before {
-    content: none;
-}
-footer{
-    width: 100%;
-    text-align: center;
-    background: #EEE;
-    height: 80px;
-    color: #AAA;
-    margin: 0 auto;
-    vertical-align:middle;
-}
-.foot{
-    width: 50%;
-    height: 100%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+footer {
+  background: #EEE;
+  color: #AAA;
+  text-align: center;
+  border-top: 1px solid #CCC;
+  line-height: 1.4em;
+  padding:10px;
 }
 .foot p{
-    margin: 5px;
+  padding: 5px;
 }

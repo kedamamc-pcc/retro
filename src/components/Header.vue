@@ -12,6 +12,3 @@
         name: "headers"
     }
 </script>
-
-<style scoped>
-</style>
