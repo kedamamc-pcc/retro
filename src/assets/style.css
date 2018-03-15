@@ -1,8 +1,9 @@
-*{
-  margin: 0 auto;
-  padding: 0 auto;
-  font-family: sans-serif;
-}
+/* 尽量不要用 * 选择器 */
+/**{*/
+  /*margin: 0 auto;*/
+  /*padding: 0 auto;*/
+  /*font-family: sans-serif;*/
+/*}*/
 :root{
   --background: #333;
   --color:#DDD;
@@ -11,10 +12,23 @@
   --height: 100%;
   --float-left: left;
   --float-right: right;
+  --contentWidth: 960px;
+
+  --contentBasic: {
+    width: var(--contentWidth);
+    margin: 0 auto;
+  }
 }
 html{
+  height: 100%;
   line-height: 1.15;
 }
+
+body {
+  height: 100%;
+  margin: 0;
+}
+
 .clearfix:after {
   content: "";
   height: 0;
@@ -32,7 +46,11 @@ html{
   color: var(--color);
 }
 .block{
-  width: calc(var(--width) / 2);
+  /* 喵喵喵？ */
+  /*width: calc(var(--width) / 2);*/
+
+  @apply --contentBasic;
+
   padding: 1em 0;
 }
 .block strong{
@@ -54,11 +72,14 @@ strong{
 }
 #New-Player{
   border-bottom: 1px solid #CCC;
-  width: var(--width);
+  /* 块级元素默认的宽度就是 100% */
+  /*width: var(--width);*/
 }
 .New-Player{
-  width: calc(var(--width) / 2);
+  /*width: calc(var(--width) / 2);*/
   padding: .5em 0;
+
+  @apply --contentBasic;
 }
 .New-Player span::before{
   font-size: small;
@@ -95,7 +116,9 @@ strong{
   font-size: small;
 }
 .rank{
-  width: calc(var(--width) /2);
+  /*width: calc(var(--width) /2);*/
+  @apply --contentBasic;
+
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
