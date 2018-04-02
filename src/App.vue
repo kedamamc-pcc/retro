@@ -1,9 +1,9 @@
 <template>
     <div id="app">
-        <Headers :update="update"></Headers>
+        <Headers :update="update"/>
         <NewPlayer :birthdays="data.birthdays" :yesterdayCount="data.yesterdayCount" :playerCount="data.playerCount"
-                   :missingCount="data.missingCount" :newbies="data.newbies"></NewPlayer>
-        <router-view :data="data.ranks"></router-view>
+                   :missingCount="data.missingCount" :newbies="data.newbies"/>
+        <router-view :data="data.ranks"/>
         <Footer :missingCount="data.missingCount"></Footer>
     </div>
 </template>
